@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator_console
 {
-    delegate double Procedure<T>(double first_number, T last_number);
+    delegate double Procedure(double first_number,double last_number);
 
     class Operation : Operations
     {
@@ -35,7 +35,7 @@ namespace Calculator_console
                 switch (choose)
                 {
                     case 1:
-                        Procedure<double> procedure = Add;
+                        Procedure procedure = Add;
                         Console.WriteLine($"Result -> {procedure(Number_a, Number_b)}");
                         break;
                     case 2:
